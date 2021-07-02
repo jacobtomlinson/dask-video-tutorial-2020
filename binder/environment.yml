@@ -2,8 +2,8 @@ name: dask-tutorial
 channels:
   - conda-forge
 dependencies:
-  - python=3.7
-  - bokeh=2.0  # Pinned until distributed 2.19 release due to breaking change
+  - python=3.8
+  - bokeh
   - asyncssh
   - dask
   - dask-ml
