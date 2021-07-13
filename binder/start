@@ -8,17 +8,18 @@ export DASK_DISTRIBUTED__DASHBOARD__LINK="/user/${JUPYTERHUB_USER}/proxy/8787/st
 jupyter lab workspaces import binder/jupyterlab-workspace.json
 
 # Set up SSH
-mkdir ~/.ssh && chmod 700 ~/.ssh
-ssh-keygen -t rsa -f .ssh/id_rsa -N ''
-cat .ssh/id_rsa.pub > .ssh/authorized_keys
-chmod 600 .ssh/authorized_keys
-ssh-keygen -t rsa -f .ssh/ssh_host_rsa_key -N ''
-cp binder/sshd_config .ssh/sshd_config
-/usr/sbin/sshd -f .ssh/sshd_config -D &
-printf "Host localhost\n  Port 2222\n" >> .ssh/config
-printf "Host 127.0.0.1\n  Port 2222\n" >> .ssh/config
-sleep 5  # Give ssh a chance to start
-ssh-keyscan -p 2222 -H localhost >> ~/.ssh/known_hosts
+# mkdir ~/.ssh && chmod 700 ~/.ssh
+# ssh-keygen -t rsa -f .ssh/id_rsa -N ''
+# cat .ssh/id_rsa.pub > .ssh/authorized_keys
+# chmod 600 .ssh/authorized_keys
+# ssh-keygen -t rsa -f .ssh/ssh_host_rsa_key -N ''
+# cp binder/sshd_config .ssh/sshd_config
+# /usr/sbin/sshd -f .ssh/sshd_config -D &
+# printf "Host localhost\n  Port 2222\n" >> .ssh/config
+# printf "Host 127.0.0.1\n  Port 2222\n" >> .ssh/config
+# sleep 5  # Give ssh a chance to start
+# ssh-keyscan -p 2222 -H localhost >> ~/.ssh/known_hosts
+
 printf '\n\nexport PATH="/srv/conda/envs/notebook/bin:/srv/conda/condabin:/home/jovyan/.local/bin:/home/jovyan/.local/bin:/srv/conda/envs/notebook/bin:/srv/conda/bin:/srv/npm/bin:$PATH"\n' >> .bashrc
 
 exec "$@"
