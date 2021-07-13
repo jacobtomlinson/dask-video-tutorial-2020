@@ -1,52 +1,99 @@
 {
   "data": {
-    "file-browser-filebrowser:cwd": {
-      "path": ""
-    },
     "layout-restorer:data": {
       "main": {
         "dock": {
           "type": "split-area",
           "orientation": "horizontal",
           "sizes": [
-            0.7047499212868628,
-            0.29525007871313735
+            0.739760554505356,
+            0.260239445494644
           ],
           "children": [
-            {
-              "type": "tab-area",
-              "currentIndex": 0,
-              "widgets": [
-                "notebook:01-Intro.ipynb"
-              ]
-            },
             {
               "type": "split-area",
               "orientation": "vertical",
               "sizes": [
-                0.5092675144741934,
-                0.4907324855258066
+                0.7754901960784314,
+                0.22450980392156863
               ],
               "children": [
                 {
                   "type": "tab-area",
                   "currentIndex": 0,
                   "widgets": [
-                    "dask-dashboard-launcher:individual-workers"
+                    "markdownviewer-widget:README.md"
                   ]
                 },
                 {
                   "type": "tab-area",
                   "currentIndex": 0,
                   "widgets": [
-                    "dask-dashboard-launcher:individual-task-stream"
+                    "dask-dashboard-launcher:/individual-task-stream"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "split-area",
+              "orientation": "vertical",
+              "sizes": [
+                0.25,
+                0.25,
+                0.25,
+                0.25
+              ],
+              "children": [
+                {
+                  "type": "split-area",
+                  "orientation": "horizontal",
+                  "sizes": [
+                    0.5,
+                    0.5
+                  ],
+                  "children": [
+                    {
+                      "type": "tab-area",
+                      "currentIndex": 0,
+                      "widgets": [
+                        "dask-dashboard-launcher:/individual-cpu"
+                      ]
+                    },
+                    {
+                      "type": "tab-area",
+                      "currentIndex": 0,
+                      "widgets": [
+                        "dask-dashboard-launcher:/individual-workers-memory"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tab-area",
+                  "currentIndex": 0,
+                  "widgets": [
+                    "dask-dashboard-launcher:/individual-nprocessing"
+                  ]
+                },
+                {
+                  "type": "tab-area",
+                  "currentIndex": 0,
+                  "widgets": [
+                    "dask-dashboard-launcher:/statics/individual-cluster-map.html"
+                  ]
+                },
+                {
+                  "type": "tab-area",
+                  "currentIndex": 0,
+                  "widgets": [
+                    "dask-dashboard-launcher:/individual-progress"
                   ]
                 }
               ]
             }
           ]
         },
-        "mode": "multiple-document"
+        "current": "markdownviewer-widget:README.md"
       },
       "left": {
         "collapsed": false,
@@ -55,39 +102,73 @@
           "filebrowser",
           "running-sessions",
           "dask-dashboard-launcher",
-          "command-palette",
-          "tab-manager"
+          "@jupyterlab/toc:plugin",
+          "extensionmanager.main-view"
         ]
       },
       "right": {
         "collapsed": true,
-        "widgets": []
-      }
-    },
-    "notebook:01-Intro.ipynb": {
-      "data": {
-        "path": "01-Intro.ipynb",
-        "factory": "Notebook"
-      }
-    },
-    "dask-dashboard-launcher:individual-workers": {
-      "data": {
-        "route": "individual-workers",
-        "label": "Workers"
-      }
-    },
-    "dask-dashboard-launcher:individual-task-stream": {
-      "data": {
-        "route": "individual-task-stream",
-        "label": "Task Stream"
+        "widgets": [
+          "jp-property-inspector"
+        ]
       }
     },
     "dask-dashboard-launcher": {
-      "url": "DASK_DASHBOARD_URL",
+      "url": "https://hub.gke2.mybinder.org/user/jacobtomlinson--o-tutorial-2020-hv7evjvp/proxy/8787/",
       "cluster": ""
+    },
+    "dask-dashboard-launcher:/individual-progress": {
+      "data": {
+        "route": "/individual-progress",
+        "label": "Progress",
+        "key": "Progress"
+      }
+    },
+    "dask-dashboard-launcher:/individual-nprocessing": {
+      "data": {
+        "route": "/individual-nprocessing",
+        "label": "Nprocessing",
+        "key": "Nprocessing"
+      }
+    },
+    "dask-dashboard-launcher:/individual-task-stream": {
+      "data": {
+        "route": "/individual-task-stream",
+        "label": "Task Stream",
+        "key": "Task Stream"
+      }
+    },
+    "dask-dashboard-launcher:/individual-workers-memory": {
+      "data": {
+        "route": "/individual-workers-memory",
+        "label": "Workers Memory",
+        "key": "Workers Memory"
+      }
+    },
+    "dask-dashboard-launcher:/statics/individual-cluster-map.html": {
+      "data": {
+        "route": "/statics/individual-cluster-map.html",
+        "label": "Cluster Map",
+        "key": "Cluster Map"
+      }
+    },
+    "dask-dashboard-launcher:/individual-cpu": {
+      "data": {
+        "route": "/individual-cpu",
+        "label": "Cpu",
+        "key": "Cpu"
+      }
+    },
+    "markdownviewer-widget:README.md": {
+      "data": {
+        "path": "README.md",
+        "factory": "Markdown Preview"
+      }
     }
   },
   "metadata": {
-    "id": "/lab"
+    "id": "/lab/workspaces/tutorial",
+    "last_modified": "2021-07-13T10:46:59.398137+00:00",
+    "created": "2021-07-13T10:46:59.398137+00:00"
   }
 }
