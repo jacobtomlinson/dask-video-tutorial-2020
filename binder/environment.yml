@@ -7,7 +7,7 @@ dependencies:
   - asyncssh
   - dask
   - dask-ml
-  - jupyterlab
+  - jupyterlab<3 # Workspace layouts are broken in 3.0. Should be fixed in 3.1.
   - ipykernel
   - ipywidgets
   - nodejs
